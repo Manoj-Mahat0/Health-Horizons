@@ -66,7 +66,7 @@ def home_scr():
         
         
     with col2:
-        image = Image.open("Img\Diabetes-cuate.png")
+        image = Image.open("Img/Diabetes-cuate.png")
         st.image(image)
     
     st.markdown("""---""")
@@ -108,7 +108,7 @@ def home_scr():
     col1, col2 = st.columns([1, 3])
 
     with col1:
-        image = Image.open("Img\CT scan-amico.png")
+        image = Image.open("Img/CT scan-amico.png")
         st.image(image)
     with col2:
         

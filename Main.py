@@ -31,7 +31,7 @@ def home_scr():
         st.write('Multiple diseases prediction using machine learning has the potential to significantly improve the accuracy and efficiency of disease diagnosis and treatment. It can also help in identifying patients at risk of developing multiple diseases at an early stage, enabling early intervention and prevention.')
         
     with col2:
-        image = Image.open('Img\Doctors-cuate.png')
+        image = Image.open('Img/Doctors-cuate.png')
         st.image(image)
         
     st.markdown("""---""")

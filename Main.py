@@ -595,7 +595,7 @@ def liver():
           st.error("The person does not have Kidney's disease")
 
 
-tab1, tab2, tab3, tab4 = st.tabs(["Home","Healt Screen", "About Us", "Contact Us"])
+tab1, tab2, tab3, tab4 = st.tabs(["Home","Health Screen", "About Us", "Contact Us"])
 
 with tab1:
     home_scr()

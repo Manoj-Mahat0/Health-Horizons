@@ -39,7 +39,7 @@ def home_scr():
     col1, col2 = st.columns([1, 3])
 
     with col1:
-        image = Image.open("Img\Visual data-bro.png")
+        image = Image.open("Img/Visual data-bro.png")
         st.image(image)
     with col2:
         
@@ -74,7 +74,7 @@ def home_scr():
     col1, col2 = st.columns([1, 3])
 
     with col1:
-        image = Image.open("Img\Cardiologist-rafiki.png")
+        image = Image.open("Img/Cardiologist-rafiki.png")
         st.image(image)
     with col2:
         
@@ -100,7 +100,7 @@ def home_scr():
         
         
     with col2:
-        image = Image.open("Img\Breast cancer research-rafiki.png")
+        image = Image.open("Img/Breast cancer research-rafiki.png")
         st.image(image)
     
     st.markdown("""---""")
@@ -134,7 +134,7 @@ def home_scr():
         
         
     with col2:
-        image = Image.open("Img\World Hepatitis Day-bro.png")
+        image = Image.open("Img/World Hepatitis Day-bro.png")
         st.image(image)
     
     st.markdown("""---""")
@@ -142,7 +142,7 @@ def home_scr():
     col1, col2 = st.columns([1, 3])
 
     with col1:
-        image = Image.open("Img\liver.png")
+        image = Image.open("Img/liver.png")
         st.image(image)
     with col2:
         

@@ -9,17 +9,17 @@ st.set_page_config(
    initial_sidebar_state="expanded",
 )
 
-diabetes_model = pickle.load(open('C:/Users/ASUS/Downloads/MDPS/Models/diabetes.pkl', 'rb'))
+diabetes_model = pickle.load(open('Models/diabetes.pkl', 'rb'))
 
-heart_disease_model = pickle.load(open('C:/Users/ASUS/Downloads/MDPS/Models/heart.pkl','rb'))
+heart_disease_model = pickle.load(open('Models/heart.pkl','rb'))
 
-Breast_Cancer_model = pickle.load(open('C:/Users/ASUS/Downloads/MDPS/Models/breast_cancer.pkl', 'rb'))
+Breast_Cancer_model = pickle.load(open('Models/breast_cancer.pkl', 'rb'))
 
-kidney_model = pickle.load(open('C:/Users/ASUS/Downloads/MDPS/Models/kidney.pkl', 'rb'))
+kidney_model = pickle.load(open('Models/kidney.pkl', 'rb'))
 
-liver_model = pickle.load(open('C:/Users/ASUS/Downloads/MDPS/Models/liver .pkl', 'rb'))
+liver_model = pickle.load(open('Models/liver .pkl', 'rb'))
 
-parkinsons_model = pickle.load(open('C:/Users/ASUS/Downloads/MDPS/Models/parkinsons_model.pkl', 'rb'))
+parkinsons_model = pickle.load(open('Models/parkinsons_model.pkl', 'rb'))
 
 
 def home_scr():
@@ -31,7 +31,7 @@ def home_scr():
         st.write('Multiple diseases prediction using machine learning has the potential to significantly improve the accuracy and efficiency of disease diagnosis and treatment. It can also help in identifying patients at risk of developing multiple diseases at an early stage, enabling early intervention and prevention.')
         
     with col2:
-        image = Image.open('C:\Code\MDPS\Img\Doctors-cuate.png')
+        image = Image.open('Img\Doctors-cuate.png')
         st.image(image)
         
     st.markdown("""---""")
@@ -39,7 +39,7 @@ def home_scr():
     col1, col2 = st.columns([1, 3])
 
     with col1:
-        image = Image.open("C:\Code\MDPS\Img\Visual data-bro.png")
+        image = Image.open("Img\Visual data-bro.png")
         st.image(image)
     with col2:
         
@@ -66,7 +66,7 @@ def home_scr():
         
         
     with col2:
-        image = Image.open("C:\Code\MDPS\Img\Diabetes-cuate.png")
+        image = Image.open("Img\Diabetes-cuate.png")
         st.image(image)
     
     st.markdown("""---""")
@@ -74,7 +74,7 @@ def home_scr():
     col1, col2 = st.columns([1, 3])
 
     with col1:
-        image = Image.open("C:\Code\MDPS\Img\Cardiologist-rafiki.png")
+        image = Image.open("Img\Cardiologist-rafiki.png")
         st.image(image)
     with col2:
         
@@ -100,7 +100,7 @@ def home_scr():
         
         
     with col2:
-        image = Image.open("C:\Code\MDPS\Img\Breast cancer research-rafiki.png")
+        image = Image.open("Img\Breast cancer research-rafiki.png")
         st.image(image)
     
     st.markdown("""---""")
@@ -108,7 +108,7 @@ def home_scr():
     col1, col2 = st.columns([1, 3])
 
     with col1:
-        image = Image.open("C:\Code\MDPS\Img\CT scan-amico.png")
+        image = Image.open("Img\CT scan-amico.png")
         st.image(image)
     with col2:
         
@@ -134,7 +134,7 @@ def home_scr():
         
         
     with col2:
-        image = Image.open("C:\Code\MDPS\Img\World Hepatitis Day-bro.png")
+        image = Image.open("Img\World Hepatitis Day-bro.png")
         st.image(image)
     
     st.markdown("""---""")
@@ -142,7 +142,7 @@ def home_scr():
     col1, col2 = st.columns([1, 3])
 
     with col1:
-        image = Image.open("C:\Code\MDPS\Img\liver.png")
+        image = Image.open("Img\liver.png")
         st.image(image)
     with col2:
         
@@ -171,9 +171,9 @@ def contact_us():
  # Use Local CSS File
 def local_css(file_name):
      with open(file_name) as f:
-         st.markdown(f"<style>{f.read()}<C:/Users/ASUS/Downloads/MDPS/style/style.css>", unsafe_allow_html=True)
+         st.markdown(f"<style>{f.read()}<style/style.css>", unsafe_allow_html=True)
 
-local_css("C:/Users/ASUS/Downloads/MDPS/style/style.css")
+local_css("style/style.css")
     
 
 def footer():

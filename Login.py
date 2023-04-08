@@ -26,7 +26,7 @@ def login():
         if user:
             if pbkdf2_sha256.verify(password, user["password"]):
                 st.success("Logged in as {}".format(username))
-                subprocess.Popen(["streamlit", "run", "Main.py"])
+                subprocess.run(["streamlit", "run", "Main.py"])
             else:
                 st.error("Incorrect password")
         else:

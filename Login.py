@@ -28,9 +28,9 @@ def login():
         if user and pbkdf2_sha256.verify(password, user["password"]):
             st.success("Logged in as {}".format(username))
 
-            # Redirect to Main.py using the `streamlit run` command
-            cmd = f"streamlit run Main.py --server.headless True --server.enableCORS False --server.runOnSave True"
-            subprocess.Popen(cmd.split())
+            # Run the Main.py file as a separate process
+            command = ["streamlit", "run", "Main.py"]
+            subprocess.Popen(command)
 
             # Exit the current Streamlit app process
             raise SystemExit

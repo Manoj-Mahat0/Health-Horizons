@@ -15,8 +15,8 @@ import subprocess
 client = MongoClient("mongodb+srv://manojmahato08779:a6TL0Yvo7OT3eiiv@cluster0.dk5pa5w.mongodb.net/?retryWrites=true&w=majority")
 db = client["mydatabase"]
 users = db["users"]
-my_list = ["streamlit", "run", "Main.py"]  # 👈️ list
-result = my_list[0].split('_')
+#my_list = ["streamlit", "run", "Main.py"]  # 👈️ list
+#result = my_list[0].split('_')
 
 # Login Function
 def login():
@@ -28,11 +28,18 @@ def login():
         if user:
             if pbkdf2_sha256.verify(password, user["password"]):
                 st.success("Logged in as {}".format(username))
-                subprocess.run(result)
+
+                # Run the Main.py file as a separate process
+                command = ["streamlit", "run", "Main.py"]
+                subprocess.run(command)
+
+                # Exit the current Streamlit app process
+                raise SystemExit
             else:
                 st.error("Incorrect password")
         else:
             st.error("Username not found")
+
 
 # Signup Function
 def signup():

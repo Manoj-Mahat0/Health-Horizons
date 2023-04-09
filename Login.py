@@ -31,6 +31,10 @@ def login():
             # Run the Main.py file as a separate process
             command = ["streamlit", "run", "Main.py"]
             subprocess.Popen(command)
+            process = subprocess.run(command, capture_output=True, text=True)
+
+            # Print the output of the Main.py app
+            st.write("Output from Main.py:\n{}".format(process.stdout))
 
             # Exit the current Streamlit app process
             raise SystemExit

@@ -25,20 +25,17 @@ def login():
     password = st.text_input("Password", type="password")
     if st.button("Login"):
         user = users.find_one({"username": username})
-        if user:
-            if pbkdf2_sha256.verify(password, user["password"]):
-                st.success("Logged in as {}".format(username))
+        if user and pbkdf2_sha256.verify(password, user["password"]):
+            st.success("Logged in as {}".format(username))
 
-                # Run the Main.py file as a separate process
-                command = ["streamlit", "run", "Main.py"]
-                subprocess.run(command)
+            # Redirect to Main.py using the `streamlit run` command
+            cmd = f"streamlit run Main.py --server.headless True --server.enableCORS False --server.runOnSave True"
+            subprocess.Popen(cmd.split())
 
-                # Exit the current Streamlit app process
-                raise SystemExit
-            else:
-                st.error("Incorrect password")
+            # Exit the current Streamlit app process
+            raise SystemExit
         else:
-            st.error("Username not found")
+            st.error("Incorrect username or password")
 
 
 # Signup Function

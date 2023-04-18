@@ -16,7 +16,7 @@ client = MongoClient("mongodb+srv://manojmahato08779:a6TL0Yvo7OT3eiiv@cluster0.d
 db = client["mydatabase"]
 users = db["users"]
 #my_list = ["streamlit", "run", "Main.py"]  # 👈️ list
-subprocess.run(["python", "Main.py"])
+subprocess(["streamlit", "run", "Main.py"])
 
 # Login Function
 def login():

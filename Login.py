@@ -16,7 +16,6 @@ client = MongoClient("mongodb+srv://manojmahato08779:a6TL0Yvo7OT3eiiv@cluster0.d
 db = client["mydatabase"]
 users = db["users"]
 #my_list = ["streamlit", "run", "Main.py"]  # 👈️ list
-subprocess(["streamlit", "run", "Main.py"])
 
 # Login Function
 def login():
@@ -29,8 +28,7 @@ def login():
             st.success("Logged in as {}".format(username))
 
             # Run the Main.py file as a separate process
-            command = ["streamlit", "run", "Main.py"]
-            subprocess.Popen(command)
+            subprocess(["streamlit", "run", "Main.py"])
             process = subprocess.run(command, capture_output=True, text=True)
 
             # Print the output of the Main.py app

@@ -9,6 +9,9 @@ import streamlit as st
 from pymongo import MongoClient
 from passlib.hash import pbkdf2_sha256
 import subprocess
+import webbrowser
+
+url = 'https://health-horizon.onrender.com/'
 
 # Connect to MongoDB
 #client = MongoClient("mongodb://localhost:27017/")
@@ -26,6 +29,9 @@ def login():
         user = users.find_one({"username": username})
         if user and pbkdf2_sha256.verify(password, user["password"]):
             st.success("Logged in as {}".format(username))
+            
+            if st.button('Open browser'):
+                webbrowser.open_new_tab(url)
 
             # Run the Main.py file as a separate process
             subprocess(["streamlit", "run", "Main.py"])
